@@ -1,0 +1,59 @@
+.flex-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container > input{
+    width: 45px;
+    margin: 2px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.title {
+    text-align: center
+}
+
+.textInput {
+    display:flex;
+    height: 25px;
+    margin-top: 0.25cm;
+    margin-bottom: 0.5cm;
+    justify-content: center;
+}
+
+.teclado {
+    display:flex;
+    flex-wrap: wrap;
+	width: 100%;
+    justify-content: center;
+}
+
+.container {
+    display:flex;
+    height: 25px;
+    margin-top: 0.25cm;
+    margin-bottom: 0.5cm;
+    justify-content: center;
+}
+
+.row {
+    margin: auto;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.letra {
+	flex-grow: 4;
+	background-color: #C9C3BD;
+	width: 45px;
+    margin: 0.15cm;
+    height: 40px;
+	font-size: 14pt;
+    border-radius: 2ch
+}

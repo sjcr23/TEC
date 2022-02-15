@@ -1,0 +1,133 @@
+	.file	"calculoVolumenCubo.cpp"
+	.intel_syntax noprefix
+	.text
+.Ltext0:
+	.section	.rodata
+	.type	_ZStL19piecewise_construct, @object
+	.size	_ZStL19piecewise_construct, 1
+_ZStL19piecewise_construct:
+	.zero	1
+	.local	_ZStL8__ioinit
+	.comm	_ZStL8__ioinit,1,1
+.LC0:
+	.string	"Ingrese el ancho: "
+.LC1:
+	.string	"Ingrese el largo: "
+.LC2:
+	.string	"Ingrese la altura: "
+.LC3:
+	.string	"El volumen es: "
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB1522:
+	.file 1 "calculoVolumenCubo.cpp"
+	.loc 1 4 11
+	.cfi_startproc
+	endbr64
+	push	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	mov	rbp, rsp
+	.cfi_def_cfa_register 6
+	sub	rsp, 32
+	.loc 1 4 11
+	mov	rax, QWORD PTR fs:40
+	mov	QWORD PTR -8[rbp], rax
+	xor	eax, eax
+	.loc 1 6 11
+	lea	rsi, .LC0[rip]
+	lea	rdi, _ZSt4cout[rip]
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+	.loc 1 7 10
+	lea	rax, -24[rbp]
+	mov	rsi, rax
+	lea	rdi, _ZSt3cin[rip]
+	call	_ZNSirsERi@PLT
+	.loc 1 8 11
+	lea	rsi, .LC1[rip]
+	lea	rdi, _ZSt4cout[rip]
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+	.loc 1 9 10
+	lea	rax, -20[rbp]
+	mov	rsi, rax
+	lea	rdi, _ZSt3cin[rip]
+	call	_ZNSirsERi@PLT
+	.loc 1 10 11
+	lea	rsi, .LC2[rip]
+	lea	rdi, _ZSt4cout[rip]
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+	.loc 1 11 10
+	lea	rax, -16[rbp]
+	mov	rsi, rax
+	lea	rdi, _ZSt3cin[rip]
+	call	_ZNSirsERi@PLT
+	.loc 1 12 20
+	mov	edx, DWORD PTR -24[rbp]
+	mov	eax, DWORD PTR -20[rbp]
+	imul	edx, eax
+	.loc 1 12 26
+	mov	eax, DWORD PTR -16[rbp]
+	.loc 1 12 14
+	imul	eax, edx
+	mov	DWORD PTR -12[rbp], eax
+	.loc 1 13 11
+	lea	rsi, .LC3[rip]
+	lea	rdi, _ZSt4cout[rip]
+	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT
+	mov	rdx, rax
+	.loc 1 13 30
+	mov	eax, DWORD PTR -12[rbp]
+	mov	esi, eax
+	mov	rdi, rdx
+	call	_ZNSolsEi@PLT
+	mov	rdx, rax
+	.loc 1 13 41
+	mov	rax, QWORD PTR _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GOTPCREL[rip]
+	mov	rsi, rax
+	mov	rdi, rdx
+	call	_ZNSolsEPFRSoS_E@PLT
+	.loc 1 14 12
+	mov	eax, 0
+	.loc 1 15 1
+	mov	rcx, QWORD PTR -8[rbp]
+	xor	rcx, QWORD PTR fs:40
+	je	.L3
+	call	__stack_chk_fail@PLT
+.L3:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE1522:
+	.size	main, .-main
+	.type	_Z41__static_initialization_and_destruction_0ii, @function
+_Z41__static_initialization_and_destruction_0ii:
+.LFB2011:
+	.loc 1 15 1
+	.cfi_startproc
+	endbr64
+	push	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	mov	rbp, rsp
+	.cfi_def_cfa_register 6
+	sub	rsp, 16
+	mov	DWORD PTR -4[rbp], edi
+	mov	DWORD PTR -8[rbp], esi
+	.loc 1 15 1
+	cmp	DWORD PTR -4[rbp], 1
+	jne	.L6
+	.loc 1 15 1 is_stmt 0 discriminator 1
+	cmp	DWORD PTR -8[rbp], 65535
+	jne	.L6
+	.file 2 "/usr/include/c++/9/iostream"
+	.loc 2 74 25 is_stmt 1
+	lea	rdi, _ZStL8__ioinit[rip]
+	call	_ZNSt8ios_base4InitC1Ev@PLT
+	lea	rdx, __dso_handle[rip]
+	lea	rsi, _ZStL8__ioinit[rip]
+	mov	rax, QWORD PTR _ZNSt8ios_base4InitD1Ev@GOTPCREL[rip]
+	mov	rdi, rax
+	call	__cxa_atexit@PLT

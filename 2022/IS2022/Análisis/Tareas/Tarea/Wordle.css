@@ -1,0 +1,16 @@
+.flex-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container > input{
+    width: 45px;
+    margin: 2px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+.title {
+    text-align: center
+}
